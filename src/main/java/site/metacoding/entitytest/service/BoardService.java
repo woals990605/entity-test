@@ -1,5 +1,7 @@
 package site.metacoding.entitytest.service;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import lombok.RequiredArgsConstructor;
@@ -29,5 +31,10 @@ public class BoardService {
 
     public BoardDetailRespDto 좋아요포함상세보기(Integer id) {
         return boardImplRepository.mFindDetail(id);
+
+    }
+
+    public List<BoardDetailRespDto> 전체보기() {
+        return boardImplRepository.mFindAll();
     }
 }
